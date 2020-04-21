@@ -1,10 +1,17 @@
 ## **ENPM809B: Building a Manufacturing Robot Software System: RWA-4**
 
-This is README to run the ROS package created for RWA4. 
+This is README to run the ROS package created for group-assignment RWA4. 
+
+Group Members:
+1.  An Li
+2.  Andre 
+3.  Nakul Patel
+4.  Revati Naik
+5.  Sarvesh Thakur
+6.  Srujan Panuganti
 
 ## **Package Name: group7_rwa4**
-This package builts an entire kit for the RWA4. It detects for faulty parts and replaces them.
-
+This package builts an entire kit for the RWA4. The package starts the competition, processes the order, queries the sensors/cameras, detects the faulty parts and replaces them while building the kit. The products can be picked up from the conveyer belt as well as bins. 
 
 ## **Minimum System Requirements**
   * ROS Melodic 
@@ -56,32 +63,32 @@ You should also have moveit_visual_tools installed if not installed previously. 
 
 To run the environment and the listener node, open another terminal and run the following command
 Ensure that you are inside your workspace directory
-   In terminal 1:
+In terminal 1:
 
-	`cd ~/catkin_ws`
+      `cd ~/catkin_ws`
 
-	`source devel/setup.bash`
+      `source devel/setup.bash`
 
-	`roslaunch group7_rwa4 group7_rwa4.launch`
+      `roslaunch group7_rwa4 group7_rwa4.launch`
 
 
-	In terminal 2 (For starting motionplanning for arms through Moveit):
+In terminal 2 (For starting motionplanning for arm1 through Moveit):
 
-	`cd ~/catkin_ws`
+      `cd ~/catkin_ws`
 
-	`source install/setup.bash`
+      `source install/setup.bash`
 
-	`roslaunch ur10_moveit_config move_group.launch arm_namespace:=/ariac/arm1`
+      `roslaunch ur10_moveit_config move_group.launch arm_namespace:=/ariac/arm1`
 
-	In terminal 3 (For starting motionplanning for arms through Moveit):
+In terminal 3 (For starting motionplanning for arm2 through Moveit):
 
-	`cd ~/catkin_ws`
+      `cd ~/catkin_ws`
 
-	`source install/setup.bash`
+      `source install/setup.bash`
 
-	`roslaunch ur10_moveit_config move_group.launch arm_namespace:=/ariac/arm2`
+      `roslaunch ur10_moveit_config move_group.launch arm_namespace:=/ariac/arm2`
 
-	In terminal 4:
+In terminal 4:
 
 	`cd ~/catkin_ws`
 	 
